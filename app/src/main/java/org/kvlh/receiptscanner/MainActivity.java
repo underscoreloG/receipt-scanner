@@ -131,10 +131,6 @@ public class MainActivity extends Activity {
                 totalSaved += ok;
                 status.setText((ok == total ? "" : "Some failed. ")
                         + "Saved " + totalSaved + " receipt(s) to Pictures/Receipts");
-                // Straight back to the scanner for the next receipt; X in the scanner stops here.
-                if (ok > 0) {
-                    startScan();
-                }
             });
         }).start();
     }

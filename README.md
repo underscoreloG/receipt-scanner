@@ -2,7 +2,7 @@
 
 <img src="docs/screenshots/icon.png" alt="App icon" width="96" align="right">
 
-Minimal Android app for scanning a pile of paper receipts quickly. One tap opens Google's ML Kit Document Scanner (automatic edge detection, crop, flatten). Each scanned page is saved as a JPEG in `Pictures/Receipts`, then the scanner reopens so you can scan the next receipt straight away. Press X in the scanner to stop.
+Minimal Android app for scanning a pile of paper receipts quickly. One tap opens Google's ML Kit Document Scanner (automatic edge detection, crop, flatten). Each scanned page is saved as a JPEG in `Pictures/Receipts` when you finish, and you land back on the main screen. The scanner accepts up to 100 pages per session, so you can add several receipts before finishing.
 
 - Java, no UI libraries, minSdk 29, targetSdk 36
 - Needs Google Play services on the phone (the scanner module comes from there)
@@ -21,8 +21,8 @@ Left: main screen. Right: the scanner with auto-capture, which takes the picture
 ## How to use
 
 1. Tap **Scan receipts**.
-2. Lay a flattened receipt on a dark, plain surface and let auto-capture take it. Tap Done or Next to save it.
-3. The scanner reopens for the next receipt. Press X to go back to the main screen, which shows how many receipts were saved since the app was opened.
+2. Lay a flattened receipt on a dark, plain surface and let auto-capture take it. To add another receipt to the same batch, use the scanner's add-page option, then repeat.
+3. Press the scanner's final button (its label comes from Google's scanner and can read Next or Done) to save everything and return to the main screen, which shows how many receipts were saved since the app was opened.
 4. **Open receipts folder** opens `Pictures/Receipts` in the Files app.
 
 ## Back up the receipts with Google Photos
