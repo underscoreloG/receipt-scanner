@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- receipt paper with torn bottom edge -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M40,31H68V78L64.5,74.5L61,78L57.5,74.5L54,78L50.5,74.5L47,78L43.5,74.5L40,78Z" />
+
+    <!-- printed lines -->
+    <path
+        android:fillColor="#FFC5CDD9"
+        android:pathData="M43,36h12v2.2h-12zM43,42h22v1.8h-22zM43,47h22v1.8h-22zM43,59h22v1.8h-22z" />
+    <path
+        android:fillColor="#FF14213D"
+        android:pathData="M43,65h22v3h-22z" />
+
+    <!-- scan line with glow -->
+    <path
+        android:fillColor="#FF2DD4BF"
+        android:fillAlpha="0.22"
+        android:pathData="M29,49h50v9.2h-50z" />
+    <path
+        android:fillColor="#FF2DD4BF"
+        android:pathData="M29,52.2h50v2.6h-50z" />
+
+    <!-- scanner corner brackets -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M30,40V35a5,5 0 0 1 5,-5H37M78,40V35a5,5 0 0 0 -5,-5H71M30,68v5a5,5 0 0 0 5,5H37M78,68v5a5,5 0 0 1 -5,5H71"
+        android:strokeColor="#FF2DD4BF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3" />
+</vector>
