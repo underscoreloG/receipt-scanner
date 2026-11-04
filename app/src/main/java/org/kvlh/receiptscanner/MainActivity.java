@@ -7,8 +7,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,9 +55,29 @@ public class MainActivity extends Activity {
         status.setPadding(0, 48, 0, 0);
         status.setText("Saved to Pictures/Receipts");
 
+        Button openButton = new Button(this);
+        openButton.setText("Open receipts folder");
+        openButton.setOnClickListener(v -> openFolder());
+        LinearLayout.LayoutParams openParams = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        openParams.topMargin = 24;
+
         root.addView(scanButton);
+        root.addView(openButton, openParams);
         root.addView(status);
         setContentView(root);
+    }
+
+    private void openFolder() {
+        Uri dir = DocumentsContract.buildDocumentUri(
+                "com.android.externalstorage.documents", "primary:Pictures/Receipts");
+        Intent intent = new Intent(Intent.ACTION_VIEW)
+                .setDataAndType(dir, DocumentsContract.Document.MIME_TYPE_DIR);
+        try {
+            startActivity(intent);
+        } catch (Exception e) {
+            status.setText("No file manager could open the folder");
+        }
     }
 
     private void startScan() {
