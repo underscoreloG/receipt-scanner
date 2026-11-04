@@ -1,5 +1,7 @@
 ﻿# Receipt Scanner
 
+**[Download the APK](https://github.com/underscoreloG/receipt-scanner/releases/latest)** (latest release, Android 10+)
+
 <img src="docs/screenshots/icon.png" alt="App icon" width="96" align="right">
 
 Minimal Android app for scanning a pile of paper receipts quickly. One tap opens Google's ML Kit Document Scanner (automatic edge detection, crop, flatten). Each scanned page is saved as a JPEG in `Pictures/Receipts` when you finish, and you land back on the main screen. The scanner accepts up to 100 pages per session, so you can add several receipts before finishing.
